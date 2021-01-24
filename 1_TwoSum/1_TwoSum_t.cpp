@@ -14,10 +14,8 @@ using Alg = Vec (*)( Vec const&, int const );
 //------------------------------
 // Это по факту просто вызов тестируемого алгоритма
 // но с наворотами для удобства тестирования
-auto sol( Alg const alg, Vec const& nums, int const target ) -> Vec {
-    // так как интерфейс задачи хочет мутабельную ссылку
-    auto nums_copy = nums;
-    auto res = alg( nums_copy, target );
+auto algAndSort( Alg const alg, Vec const& nums, int const target ) -> Vec {
+    auto res = alg( nums, target );
     // чтоб нам было проще сравнивать результаты
     std::sort( res.begin(), res.end() );
     return res;
@@ -26,36 +24,36 @@ auto sol( Alg const alg, Vec const& nums, int const target ) -> Vec {
 //------------------------------
 // шаблон, чтоб работали секции (TODO это кажется хаком, нужно смотреть доки по Catch2)
 template<Alg alg>
-void exec_all_tests() {
+void execAllTests() {
     SECTION( "example test case1" ) {
         const auto nums = Vec{ 2, 7, 11, 15 };
-        REQUIRE( sol( alg, nums, 9 ) == Vec{ 0, 1 } );
+        REQUIRE( algAndSort( alg, nums, 9 ) == Vec{ 0, 1 } );
     }
 
     SECTION( "example test case2" ) {
         const auto nums = Vec{ 3, 2, 4 };
-        REQUIRE( sol( alg, nums, 6 ) == Vec{ 1, 2 } );
+        REQUIRE( algAndSort( alg, nums, 6 ) == Vec{ 1, 2 } );
     }
 
     SECTION( "example test case3" ) {
         const auto nums = Vec{ 3, 3 };
-        REQUIRE( sol( alg, nums, 6 ) == Vec{ 0, 1 } );
+        REQUIRE( algAndSort( alg, nums, 6 ) == Vec{ 0, 1 } );
     }
 }
 
 //------------------------------
 TEST_CASE( "algorithm1", "[1_TwoSum]" ) {
-    exec_all_tests<Solution::twoSum1>();
+    execAllTests<Solution::twoSum1>();
 }
 
 //------------------------------
 TEST_CASE( "algorithm2", "[1_TwoSum]" ) {
-    exec_all_tests<Solution::twoSum2>();
+    execAllTests<Solution::twoSum2>();
 }
 
 //------------------------------
 TEST_CASE( "algorithm3", "[1_TwoSum]" ) {
-    exec_all_tests<Solution::twoSum3>();
+    execAllTests<Solution::twoSum3>();
 }
 
 } // namespace {
