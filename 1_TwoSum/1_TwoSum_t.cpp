@@ -9,14 +9,7 @@ namespace {
 //------------------------------
 using Sol = Solution;
 using Vec = std::vector<int>;
-
-//------------------------------
-enum class Alg {
-      kHashTable
-    , kSortAndBSearch
-    // поиск линейный, но он быстрее бинарного, так как структурно другой
-    , kSortAndLinSearch
-};
+using Alg = Vec (*)( Vec const&, int const );
 
 //------------------------------
 // Это по факту просто вызов тестируемого алгоритма
@@ -24,20 +17,7 @@ enum class Alg {
 auto sol( Alg const alg, Vec const& nums, int const target ) -> Vec {
     // так как интерфейс задачи хочет мутабельную ссылку
     auto nums_copy = nums;
-    auto res = [&]{
-        switch ( alg ) {
-            case Alg::kHashTable: {
-                return Solution::twoSum1( nums_copy, target );
-            }
-            case Alg::kSortAndBSearch: {
-                return Solution::twoSum2( nums_copy, target );
-            }
-            case Alg::kSortAndLinSearch: {
-                return Solution::twoSum3( nums_copy, target );
-            }
-            // [[unreachable]]
-        };
-    }();
+    auto res = alg( nums_copy, target );
     // чтоб нам было проще сравнивать результаты
     std::sort( res.begin(), res.end() );
     return res;
@@ -65,17 +45,17 @@ void exec_all_tests() {
 
 //------------------------------
 TEST_CASE( "algorithm1", "[1_TwoSum]" ) {
-    exec_all_tests<Alg::kHashTable>();
+    exec_all_tests<Solution::twoSum1>();
 }
 
 //------------------------------
 TEST_CASE( "algorithm2", "[1_TwoSum]" ) {
-    exec_all_tests<Alg::kSortAndBSearch>();
+    exec_all_tests<Solution::twoSum2>();
 }
 
 //------------------------------
 TEST_CASE( "algorithm3", "[1_TwoSum]" ) {
-    exec_all_tests<Alg::kSortAndLinSearch>();
+    exec_all_tests<Solution::twoSum3>();
 }
 
 } // namespace {
