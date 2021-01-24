@@ -39,43 +39,33 @@ auto sol( Alg const alg, Vec const& nums, int const target ) -> Vec {
 }
 
 //------------------------------
-//------------------------------
-//------------------------------
-TEST_CASE( "example test case1", "[1_TwoSum (alg1)]" ) {
-    const auto nums = Vec{ 2, 7, 11, 15 };
-    REQUIRE( sol( Alg::kHashTable, nums, 9 ) == Vec{ 0, 1 } );
+// шаблон, чтоб работали секции (TODO это кажется хаком, нужно смотреть доки по Catch2)
+template<Alg alg>
+void exec_all_tests() {
+    SECTION( "example test case1" ) {
+        const auto nums = Vec{ 2, 7, 11, 15 };
+        REQUIRE( sol( alg, nums, 9 ) == Vec{ 0, 1 } );
+    }
+
+    SECTION( "example test case2" ) {
+        const auto nums = Vec{ 3, 2, 4 };
+        REQUIRE( sol( alg, nums, 6 ) == Vec{ 1, 2 } );
+    }
+
+    SECTION( "example test case3" ) {
+        const auto nums = Vec{ 3, 3 };
+        REQUIRE( sol( alg, nums, 6 ) == Vec{ 0, 1 } );
+    }
 }
 
 //------------------------------
-TEST_CASE( "example test case2", "[1_TwoSum (alg1)]" ) {
-    const auto nums = Vec{ 3, 2, 4 };
-    REQUIRE( sol( Alg::kHashTable, nums, 6 ) == Vec{ 1, 2 } );
+TEST_CASE( "algorithm1", "[1_TwoSum]" ) {
+    exec_all_tests<Alg::kHashTable>();
 }
 
 //------------------------------
-TEST_CASE( "example test case3", "[1_TwoSum (alg2)]" ) {
-    const auto nums = Vec{ 3, 3 };
-    REQUIRE( sol( Alg::kHashTable, nums, 6 ) == Vec{ 0, 1 } );
-}
-
-//------------------------------
-//------------------------------
-//------------------------------
-TEST_CASE( "example test case1", "[1_TwoSum (alg2)]" ) {
-    const auto nums = Vec{ 2, 7, 11, 15 };
-    REQUIRE( sol( Alg::kSortAndBSearch, nums, 9 ) == Vec{ 0, 1 } );
-}
-
-//------------------------------
-TEST_CASE( "example test case2", "[1_TwoSum (alg2)]" ) {
-    const auto nums = Vec{ 3, 2, 4 };
-    REQUIRE( sol( Alg::kSortAndBSearch, nums, 6 ) == Vec{ 1, 2 } );
-}
-
-//------------------------------
-TEST_CASE( "example test case3", "[1_TwoSum (alg2)]" ) {
-    const auto nums = Vec{ 3, 3 };
-    REQUIRE( sol( Alg::kSortAndBSearch, nums, 6 ) == Vec{ 0, 1 } );
+TEST_CASE( "algorithm2", "[1_TwoSum]" ) {
+    exec_all_tests<Alg::kSortAndBSearch>();
 }
 
 } // namespace {

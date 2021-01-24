@@ -46,7 +46,7 @@ auto Solution::twoSum2( std::vector<int>& nums, int target ) -> std::vector<int>
     for ( std::size_t i = 0; i < nums_inds.size(); ++i ) {
         if ( nums_inds[i].num > target/2 ) {
             // [[unreachable]]
-            return {100, 200};
+            return {};
         }
         const auto searched = target - nums_inds[i].num;
         const auto second_iter = std::lower_bound(
@@ -67,7 +67,7 @@ auto Solution::twoSum2( std::vector<int>& nums, int target ) -> std::vector<int>
         }
     }
     // [[unreachable]]
-    return {500, 600};
+    return {};
 }
 
 } // namespace lc::t1
