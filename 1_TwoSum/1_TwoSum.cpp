@@ -20,12 +20,16 @@ auto Solution::twoSum1( std::vector<int> const& nums, int target ) -> std::vecto
     return {};
 }
 
+namespace {
+
 //------------------------------
-auto Solution::twoSum2( std::vector<int>& nums, int target ) -> std::vector<int> {
-    struct NumInd {
-        int num;
-        std::size_t ind;
-    };
+struct NumInd {
+    int num;
+    std::size_t ind;
+};
+
+//------------------------------
+auto makeSortedList( std::vector<int> const& nums ) -> std::vector<NumInd> {
     auto nums_inds = std::vector<NumInd>( nums.size() ); // ! с заданным размером !
     std::generate(
               nums_inds.begin()
@@ -42,7 +46,15 @@ auto Solution::twoSum2( std::vector<int>& nums, int target ) -> std::vector<int>
             return o1.num < o2.num;
         }
     );
-    // нашли сами числа
+    return nums_inds;
+}
+
+} // namespace {
+
+//------------------------------
+auto Solution::twoSum2( std::vector<int> const& nums, int target ) -> std::vector<int> {
+    const auto nums_inds = makeSortedList( nums );
+
     for ( std::size_t i = 0; i < nums_inds.size(); ++i ) {
         if ( nums_inds[i].num > target/2 ) {
             // [[unreachable]]
@@ -63,6 +75,30 @@ auto Solution::twoSum2( std::vector<int>& nums, int target ) -> std::vector<int>
             return {
                   static_cast<int>( second_iter->ind )
                 , static_cast<int>( nums_inds[i].ind )
+            };
+        }
+    }
+    // [[unreachable]]
+    return {};
+}
+
+
+//------------------------------
+auto Solution::twoSum3( std::vector<int> const& nums, int target ) -> std::vector<int> {
+    const auto nums_inds = makeSortedList( nums );
+    // нашли сами числа
+    auto left = std::size_t{0};
+    auto right = nums_inds.size() - 1;
+    while ( left < right ) {
+        const auto sum = nums_inds[ left ].num + nums_inds[ right ].num;
+        if ( sum > target ) {
+            --right;
+        } else if ( sum < target ) {
+            ++left;
+        } else {
+            return {
+                  static_cast<int>( nums_inds[left].ind )
+                , static_cast<int>( nums_inds[right].ind )
             };
         }
     }

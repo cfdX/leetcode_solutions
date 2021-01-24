@@ -14,6 +14,8 @@ using Vec = std::vector<int>;
 enum class Alg {
       kHashTable
     , kSortAndBSearch
+    // поиск линейный, но он быстрее бинарного, так как структурно другой
+    , kSortAndLinSearch
 };
 
 //------------------------------
@@ -29,6 +31,9 @@ auto sol( Alg const alg, Vec const& nums, int const target ) -> Vec {
             }
             case Alg::kSortAndBSearch: {
                 return Solution::twoSum2( nums_copy, target );
+            }
+            case Alg::kSortAndLinSearch: {
+                return Solution::twoSum3( nums_copy, target );
             }
             // [[unreachable]]
         };
@@ -66,6 +71,11 @@ TEST_CASE( "algorithm1", "[1_TwoSum]" ) {
 //------------------------------
 TEST_CASE( "algorithm2", "[1_TwoSum]" ) {
     exec_all_tests<Alg::kSortAndBSearch>();
+}
+
+//------------------------------
+TEST_CASE( "algorithm3", "[1_TwoSum]" ) {
+    exec_all_tests<Alg::kSortAndLinSearch>();
 }
 
 } // namespace {

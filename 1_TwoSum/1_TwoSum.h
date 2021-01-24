@@ -15,7 +15,7 @@ class Solution {
 public:
     //------------------------------
     static
-    auto twoSum( std::vector<int>& nums, int target ) -> std::vector<int> {
+    auto twoSum( std::vector<int> const& nums, int target ) -> std::vector<int> {
         return twoSum2( nums, target );
     }
 
@@ -27,7 +27,13 @@ public:
     //------------------------------
     // O(n logn)
     static
-    auto twoSum2( std::vector<int>& nums, int target ) -> std::vector<int>;
+    auto twoSum2( std::vector<int> const& nums, int target ) -> std::vector<int>;
+
+    //------------------------------
+    // O(n logn) (no binary search)
+    // второй этапе тут будет делаться за линейное время, а не O(n logn)
+    static
+    auto twoSum3( std::vector<int> const& nums, int target ) -> std::vector<int>;
 };
 
 } // namespace lc::t1
