@@ -73,7 +73,7 @@ TEST_CASE( "example test case2", "[1_TwoSum (alg2)]" ) {
 }
 
 //------------------------------
-TEST_CASE( "example test case3", "[1_TwoSum (alg1)]" ) {
+TEST_CASE( "example test case3", "[1_TwoSum (alg2)]" ) {
     const auto nums = Vec{ 3, 3 };
     REQUIRE( sol( Alg::kSortAndBSearch, nums, 6 ) == Vec{ 0, 1 } );
 }

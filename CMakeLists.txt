@@ -11,7 +11,6 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5Core)
 add_subdirectory(Catch2)
 include_directories(Catch2/src/catch2)
 
@@ -22,5 +21,4 @@ add_executable(leetcode_solutions
   1_TwoSum/1_TwoSum_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
-target_link_libraries(leetcode_solutions PRIVATE Qt${QT_VERSION_MAJOR}::Core
-    PRIVATE Catch2::Catch2)
+target_link_libraries(leetcode_solutions Catch2::Catch2)
