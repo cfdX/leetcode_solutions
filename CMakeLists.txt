@@ -19,6 +19,9 @@ add_executable(leetcode_solutions
   1_TwoSum/1_TwoSum.h
   1_TwoSum/1_TwoSum.cpp
   1_TwoSum/1_TwoSum_t.cpp
+  ListNode.cpp
+  ListNode.h
+  ListNode_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
