@@ -57,6 +57,7 @@ private:
 
 //---------------------------
 auto generateList( std::initializer_list<int> ) -> ListUniquePtr;
+auto generateList( std::vector<int> ) -> ListUniquePtr;
 auto listToVec( ListNode * ) -> std::vector<int>;
 
 } // namespace lc

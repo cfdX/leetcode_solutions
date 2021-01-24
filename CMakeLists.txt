@@ -16,12 +16,15 @@ include_directories(Catch2/src/catch2)
 
 add_executable(leetcode_solutions
   main.cpp
-  1_TwoSum/1_TwoSum.h
-  1_TwoSum/1_TwoSum.cpp
-  1_TwoSum/1_TwoSum_t.cpp
   ListNode.cpp
   ListNode.h
   ListNode_t.cpp
+  1_TwoSum/1_TwoSum.h
+  1_TwoSum/1_TwoSum.cpp
+  1_TwoSum/1_TwoSum_t.cpp
+  2_AddTwoNumbers/2_AddTwoNumbers.h
+  2_AddTwoNumbers/2_AddTwoNumbers.cpp
+  2_AddTwoNumbers/2_AddTwoNumbers_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)

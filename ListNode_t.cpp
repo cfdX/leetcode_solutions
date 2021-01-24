@@ -44,23 +44,23 @@ TEST_CASE( "generate", "[ListNode]" ) {
 //------------------------------
 TEST_CASE( "listToVec", "[ListNode]" ) {
     using Vec = std::vector<int>;
-    SECTION( "empty list" ) {
+    SECTION( "empty list (init list)" ) {
         const auto vec = listToVec( generateList( {} ).get() );
         REQUIRE( vec == Vec{} );
     }
 
-    SECTION( "one element" ) {
-        const auto vec = listToVec( generateList( {1} ).get() );
+    SECTION( "one element (vector)" ) {
+        const auto vec = listToVec( generateList( Vec{1} ).get() );
         REQUIRE( vec == Vec{1} );
     }
 
-    SECTION( "two elements" ) {
+    SECTION( "two elements (init list)" ) {
         const auto vec = listToVec( generateList( {1, 2} ).get() );
         REQUIRE( vec == Vec{1, 2} );
     }
 
-    SECTION( "three elements" ) {
-        const auto vec = listToVec( generateList( {1, 2, 3} ).get() );
+    SECTION( "three elements (vector)" ) {
+        const auto vec = listToVec( generateList( Vec{1, 2, 3} ).get() );
         REQUIRE( vec == Vec{1, 2, 3} );
     }
 }

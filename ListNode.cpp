@@ -1,5 +1,7 @@
 #include "ListNode.h"
 
+#include <ranges>
+
 namespace lc {
 
 //---------------------------
@@ -47,7 +49,10 @@ auto ListUniquePtr::operator=( ListUniquePtr&& o ) noexcept -> ListUniquePtr& {
 //---------------------------
 //---------------------------
 //---------------------------
-auto generateList( std::initializer_list<int> nums ) -> ListUniquePtr {
+// да, я просто хотел поюзать концепты =)
+template<std::ranges::input_range Nums>
+    requires std::same_as<std::ranges::range_value_t<Nums>,int>
+auto generateListImpl( Nums const& nums ) -> ListUniquePtr {
     auto dummy = ListNode{};
     auto prev = &dummy;
     // TODO код не безопасен относительно исключений, но "и так сойдет"
@@ -56,6 +61,14 @@ auto generateList( std::initializer_list<int> nums ) -> ListUniquePtr {
         prev = prev->next;
     }
     return ListUniquePtr{ dummy.next };
+}
+
+auto generateList( std::initializer_list<int> nums ) -> ListUniquePtr {
+    return generateListImpl( nums );
+}
+
+auto generateList( std::vector<int> nums ) -> ListUniquePtr {
+    return generateListImpl( nums );
 }
 
 //---------------------------
