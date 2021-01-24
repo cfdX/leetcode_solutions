@@ -12,8 +12,12 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5Core)
+add_subdirectory(Catch2)
+include_directories(Catch2/src/catch2)
 
 add_executable(leetcode_solutions
   main.cpp
+  Catch2/src/catch2/catch_all.hpp
 )
-target_link_libraries(leetcode_solutions Qt${QT_VERSION_MAJOR}::Core)
+target_link_libraries(leetcode_solutions PRIVATE Qt${QT_VERSION_MAJOR}::Core
+    PRIVATE Catch2::Catch2)

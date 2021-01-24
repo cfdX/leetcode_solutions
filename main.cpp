@@ -1,4 +1,10 @@
+#define CATCH_CONFIG_RUNNER
 
-int main(int /*argc*/, char */*argv*/[]) {
-    return 0;
+#include <catch_all.hpp>
+
+auto main( int argc, char* argv[] ) -> int {
+    const auto result = Catch::Session().run(
+        argc, argv
+    );
+    return result;
 }
