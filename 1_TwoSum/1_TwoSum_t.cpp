@@ -42,17 +42,17 @@ void execAllTests() {
 }
 
 //------------------------------
-TEST_CASE( "algorithm1", "[1_TwoSum]" ) {
+TEST_CASE( "1_TwoSum algorithm1", "[]" ) {
     execAllTests<Solution::twoSum1>();
 }
 
 //------------------------------
-TEST_CASE( "algorithm2", "[1_TwoSum]" ) {
+TEST_CASE( "1_TwoSum algorithm2", "[]" ) {
     execAllTests<Solution::twoSum2>();
 }
 
 //------------------------------
-TEST_CASE( "algorithm3", "[1_TwoSum]" ) {
+TEST_CASE( "1_TwoSum algorithm3", "[]" ) {
     execAllTests<Solution::twoSum3>();
 }
 

@@ -28,7 +28,7 @@ auto callAlg( Vec const& n1, Vec const& n2 ) -> Vec {
 }
 
 //------------------------------
-TEST_CASE( "example testcases", "[2_AddTwoNumbers]" ) {
+TEST_CASE( "2_AddTwoNumbers example testcases", "[]" ) {
     SECTION( "example 1" ) {
         const auto n1 = Vec{ 2, 4, 3 };
         const auto n2 = Vec{ 5, 6, 4 };
@@ -50,7 +50,7 @@ TEST_CASE( "example testcases", "[2_AddTwoNumbers]" ) {
 }
 
 //------------------------------
-TEST_CASE( "corner cases", "[2_AddTwoNumbers]" ) {
+TEST_CASE( "2_AddTwoNumbers corner cases", "[]" ) {
     SECTION( "empty lists" ) {
         REQUIRE( callAlg( {}, {} ) == Vec{} );
     }
