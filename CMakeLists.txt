@@ -25,6 +25,9 @@ add_executable(leetcode_solutions
   2_AddTwoNumbers/2_AddTwoNumbers.h
   2_AddTwoNumbers/2_AddTwoNumbers.cpp
   2_AddTwoNumbers/2_AddTwoNumbers_t.cpp
+  3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars.h
+  3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars.cpp
+  3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
