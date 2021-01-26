@@ -28,6 +28,9 @@ add_executable(leetcode_solutions
   3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars.h
   3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars.cpp
   3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars_t.cpp
+  34_FirstAndLastPositionOfElemInSortedArr/34_FirstAndLastPositionOfElemInSortedArr.h
+  34_FirstAndLastPositionOfElemInSortedArr/34_FirstAndLastPositionOfElemInSortedArr.cpp
+  34_FirstAndLastPositionOfElemInSortedArr/34_FirstAndLastPositionOfElemInSortedArr_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
