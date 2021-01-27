@@ -36,7 +36,7 @@ auto callAlg( Vec const& strs ) -> std::vector<Vec> {
 }
 
 //------------------------------
-TEST_CASE( "49_GroupAnagrams example testcases", "[ }" ) {
+TEST_CASE( "49_GroupAnagrams example testcases", "[]" ) {
     SECTION( "example 1" ) {
         const auto input = Vec{
             "eat", "tea", "tan", "ate", "nat", "bat"

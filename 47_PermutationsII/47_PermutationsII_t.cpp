@@ -13,7 +13,7 @@ auto callAlg( std::vector<int> const& nums ) -> ResVec {
 }
 
 //------------------------------
-TEST_CASE( "47_PermutationsII example testcases", "[ }" ) {
+TEST_CASE( "47_PermutationsII example testcases", "[]" ) {
     SECTION( "example 1" ) {
         const auto exp = ResVec{
               { 1, 1, 2 }
@@ -38,7 +38,7 @@ TEST_CASE( "47_PermutationsII example testcases", "[ }" ) {
 
 
 //------------------------------
-TEST_CASE( "47_PermutationsII my testcases", "[ }" ) {
+TEST_CASE( "47_PermutationsII my testcases", "[]" ) {
     SECTION( "example 1 but not sorted" ) {
         const auto exp = ResVec{
               { 1, 1, 2 }

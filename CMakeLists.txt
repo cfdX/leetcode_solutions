@@ -52,6 +52,9 @@ add_executable(leetcode_solutions
   49_GroupAnagrams/49_GroupAnagrams.h
   49_GroupAnagrams/49_GroupAnagrams.cpp
   49_GroupAnagrams/49_GroupAnagrams_t.cpp
+  50_PowXN/50_PowXN.h
+  50_PowXN/50_PowXN.cpp
+  50_PowXN/50_PowXN_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)

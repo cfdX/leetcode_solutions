@@ -14,7 +14,7 @@ auto callAlg( Vec nums ) -> Vec {
 }
 
 //------------------------------
-TEST_CASE( "31_NextPermutation example testcases", "[ }" ) {
+TEST_CASE( "31_NextPermutation example testcases", "[]" ) {
     SECTION( "example 1" ) {
         REQUIRE( callAlg( { 1, 2, 3 } ) == Vec{ 1, 3, 2 } );
     }
