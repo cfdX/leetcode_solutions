@@ -28,6 +28,9 @@ add_executable(leetcode_solutions
   3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars.h
   3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars.cpp
   3_LongestSubWithoutRepeatingChars/3_LongestSubWithoutRepeatingChars_t.cpp
+  5_LongestPalindromicSubstring/5_LongestPalindromicSubstring.h
+  5_LongestPalindromicSubstring/5_LongestPalindromicSubstring.cpp
+  5_LongestPalindromicSubstring/5_LongestPalindromicSubstring_t.cpp
   31_NextPermutation/31_NextPermutation.h
   31_NextPermutation/31_NextPermutation.cpp
   31_NextPermutation/31_NextPermutation_t.cpp
