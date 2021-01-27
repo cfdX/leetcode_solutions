@@ -8,7 +8,7 @@ using Matr = std::vector<std::vector<int>>;
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( Matr const& matr ) {
+auto callAlg( Matr const& matr ) -> Matr {
     auto copy_matr = matr;
     Solution::rotate( copy_matr );
     return copy_matr;

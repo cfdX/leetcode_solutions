@@ -40,6 +40,9 @@ add_executable(leetcode_solutions
   48_RotateImage/48_RotateImage.h
   48_RotateImage/48_RotateImage.cpp
   48_RotateImage/48_RotateImage_t.cpp
+  46_Permutations/46_Permutations.h
+  46_Permutations/46_Permutations.cpp
+  46_Permutations/46_Permutations_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
