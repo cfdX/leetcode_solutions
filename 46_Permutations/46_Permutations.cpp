@@ -4,14 +4,9 @@
 
 namespace lc::t46 {
 
-namespace {
-
-//------------------------------
-using Vec = std::vector<int>;
-
 //------------------------------
 [[nodiscard]]
-auto nextPermutation( Vec nums ) -> Vec {
+auto Solution::nextPermutation( Vec nums ) -> Vec {
     for ( int i = static_cast<int>(nums.size())-2; i >= 0; --i ) {
         if ( nums[i] < nums[i+1] ) {
             auto j = static_cast<std::size_t>(i) + 1;
@@ -31,7 +26,7 @@ auto nextPermutation( Vec nums ) -> Vec {
 
 //------------------------------
 [[nodiscard]]
-auto fact( std::size_t n ) noexcept -> std::size_t {
+auto Solution::fact( std::size_t n ) noexcept -> std::size_t {
     auto res = std::size_t{1};
     for ( std::size_t i = 1; i <= n; ++i ) {
         res *= i;
@@ -39,13 +34,9 @@ auto fact( std::size_t n ) noexcept -> std::size_t {
     return res;
 }
 
-} // namespace {
-
 //------------------------------
 [[nodiscard]]
-auto Solution::permute(
-            Vec nums )
-        -> std::vector<Vec> {
+auto Solution::permute( Vec nums ) -> std::vector<Vec> {
     if ( true == nums.empty() ) {
         return {};
     }

@@ -13,11 +13,22 @@ Given an array nums of distinct integers, return all the possible permutations. 
 class Solution {
 public:
     //------------------------------
+    using Vec = std::vector<int>;
+
+    //------------------------------
     [[nodiscard]]
     static
-    auto permute(
-                std::vector<int> nums)
-            -> std::vector<std::vector<int>>;
+    auto permute( Vec nums) -> std::vector<Vec>;
+
+    //------------------------------
+    [[nodiscard]]
+    static
+    auto nextPermutation( Vec nums ) -> Vec;
+
+    //------------------------------
+    [[nodiscard]]
+    static
+    auto fact( std::size_t n ) noexcept -> std::size_t;
 };
 
 } // namespace lc::t46
