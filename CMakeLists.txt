@@ -37,6 +37,9 @@ add_executable(leetcode_solutions
   41_FirstMissingPositive/41_FirstMissingPositive.h
   41_FirstMissingPositive/41_FirstMissingPositive.cpp
   41_FirstMissingPositive/41_FirstMissingPositive_t.cpp
+  48_RotateImage/48_RotateImage.h
+  48_RotateImage/48_RotateImage.cpp
+  48_RotateImage/48_RotateImage_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
