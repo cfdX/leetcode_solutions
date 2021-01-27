@@ -49,6 +49,9 @@ add_executable(leetcode_solutions
   48_RotateImage/48_RotateImage.h
   48_RotateImage/48_RotateImage.cpp
   48_RotateImage/48_RotateImage_t.cpp
+  49_GroupAnagrams/49_GroupAnagrams.h
+  49_GroupAnagrams/49_GroupAnagrams.cpp
+  49_GroupAnagrams/49_GroupAnagrams_t.cpp
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
