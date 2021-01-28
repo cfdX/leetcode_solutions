@@ -19,6 +19,7 @@ You can assume that you can always reach the last index.
 class Solution {
 public:
     //------------------------------
+    // O(n) solution
     [[nodiscard]]
     static
     auto jump( std::vector<int>& nums ) noexcept -> int;

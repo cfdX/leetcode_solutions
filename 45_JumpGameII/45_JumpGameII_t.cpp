@@ -30,22 +30,18 @@ TEST_CASE( "45_JumpGameII my testcases", "[]" ) {
     SECTION( "empty vector" ) {
         REQUIRE( callAlg( {} ) == 0 );
     }
-
     SECTION( "one element " ) {
         REQUIRE( callAlg( {0} ) == 0 );
         REQUIRE( callAlg( {1} ) == 0 );
     }
-
     SECTION( "three steps" ) {
         const auto nums = Vec{ 3, 2, 2, 2, 1, 5, 1, 1, 1, 1, 1 };
         REQUIRE( callAlg( nums ) == 3 );
     }
-
     SECTION( "three steps with zero" ) {
         const auto nums = Vec{ 3, 2, 2, 2, 3, 0, 5, 1, 1, 1, 1, 1 };
         REQUIRE( callAlg( nums ) == 4 );
     }
-
     SECTION( "with dead path" ) {
         const auto nums = Vec{ 4, 2, 1, 0, 3, 0 };
         REQUIRE( callAlg( nums ) == 2 );
