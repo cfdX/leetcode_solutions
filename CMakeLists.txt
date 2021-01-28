@@ -31,6 +31,9 @@ add_executable(leetcode_solutions
   5_LongestPalindromicSubstring/5_LongestPalindromicSubstring.h
   5_LongestPalindromicSubstring/5_LongestPalindromicSubstring.cpp
   5_LongestPalindromicSubstring/5_LongestPalindromicSubstring_t.cpp
+  6_ZigZagConversion/6_ZigZagConversion.h
+  6_ZigZagConversion/6_ZigZagConversion.cpp
+  6_ZigZagConversion/6_ZigZagConversion_t.cpp
   31_NextPermutation/31_NextPermutation.h
   31_NextPermutation/31_NextPermutation.cpp
   31_NextPermutation/31_NextPermutation_t.cpp
@@ -70,3 +73,4 @@ add_executable(leetcode_solutions
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
+
