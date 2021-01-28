@@ -43,6 +43,9 @@ add_executable(leetcode_solutions
   41_FirstMissingPositive/41_FirstMissingPositive.h
   41_FirstMissingPositive/41_FirstMissingPositive.cpp
   41_FirstMissingPositive/41_FirstMissingPositive_t.cpp
+  45_JumpGameII/45_JumpGameII.h
+  45_JumpGameII/45_JumpGameII.cpp
+  45_JumpGameII/45_JumpGameII_t.cpp
   46_Permutations/46_Permutations.h
   46_Permutations/46_Permutations.cpp
   46_Permutations/46_Permutations_t.cpp
