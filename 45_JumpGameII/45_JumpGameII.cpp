@@ -4,7 +4,7 @@ namespace lc::t45 {
 
 //------------------------------
 [[nodiscard]]
-auto Solution::jump( std::vector<int>& nums ) noexcept -> int {
+auto Solution::jump( std::vector<int> const& nums ) noexcept -> int {
     if ( nums.size() < 2 ) {
         return 0;
     }

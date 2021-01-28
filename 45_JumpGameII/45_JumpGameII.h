@@ -22,7 +22,7 @@ public:
     // O(n) solution
     [[nodiscard]]
     static
-    auto jump( std::vector<int>& nums ) noexcept -> int;
+    auto jump( std::vector<int> const& nums ) noexcept -> int;
 };
 
 } // namespace lc::t45

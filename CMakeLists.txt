@@ -43,6 +43,9 @@ add_executable(leetcode_solutions
   41_FirstMissingPositive/41_FirstMissingPositive.h
   41_FirstMissingPositive/41_FirstMissingPositive.cpp
   41_FirstMissingPositive/41_FirstMissingPositive_t.cpp
+  42_TrappingRainWater/42_TrappingRainWater.h
+  42_TrappingRainWater/42_TrappingRainWater.cpp
+  42_TrappingRainWater/42_TrappingRainWater_t.cpp
   45_JumpGameII/45_JumpGameII.h
   45_JumpGameII/45_JumpGameII.cpp
   45_JumpGameII/45_JumpGameII_t.cpp
