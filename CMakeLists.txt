@@ -43,6 +43,9 @@ add_executable(leetcode_solutions
   34_FirstAndLastPositionOfElemInSortedArr/34_FirstAndLastPositionOfElemInSortedArr.h
   34_FirstAndLastPositionOfElemInSortedArr/34_FirstAndLastPositionOfElemInSortedArr.cpp
   34_FirstAndLastPositionOfElemInSortedArr/34_FirstAndLastPositionOfElemInSortedArr_t.cpp
+  36_ValidSudoku/36_ValidSudoku.h
+  36_ValidSudoku/36_ValidSudoku.cpp
+  36_ValidSudoku/36_ValidSudoku_t.cpp
   39_CombinationSum/39_CombinationSum.h
   39_CombinationSum/39_CombinationSum.cpp
   39_CombinationSum/39_CombinationSum_t.cpp
@@ -76,5 +79,3 @@ add_executable(leetcode_solutions
   Catch2/src/catch2/catch_all.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
-
-
