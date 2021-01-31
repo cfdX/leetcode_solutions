@@ -46,6 +46,9 @@ add_executable(leetcode_solutions
   36_ValidSudoku/36_ValidSudoku.h
   36_ValidSudoku/36_ValidSudoku.cpp
   36_ValidSudoku/36_ValidSudoku_t.cpp
+  37_SudokuSolver/37_SudokuSolver.h
+  37_SudokuSolver/37_SudokuSolver.cpp
+  37_SudokuSolver/37_SudokuSolver_t.cpp
   39_CombinationSum/39_CombinationSum.h
   39_CombinationSum/39_CombinationSum.cpp
   39_CombinationSum/39_CombinationSum_t.cpp

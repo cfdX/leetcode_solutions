@@ -45,7 +45,7 @@ auto loop( Extrator const& extractor ) noexcept -> bool {
     return true;
 }
 
-} // namespace
+} // namespace {
 
 //------------------------------
 [[nodiscard]]
