@@ -1,4 +1,4 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
 #include "44_WildcardMatching.h"
 #include "44_WildcardMatching_V2.h"
 

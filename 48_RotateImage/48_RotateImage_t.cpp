@@ -1,4 +1,4 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
 #include "48_RotateImage.h"
 
 namespace lc::t48 {

@@ -1,4 +1,4 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
 #include "37_SudokuSolver.h"
 
 #include "../36_ValidSudoku/36_ValidSudoku.h"

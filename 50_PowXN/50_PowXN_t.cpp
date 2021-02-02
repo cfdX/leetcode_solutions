@@ -1,4 +1,5 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
+#include <catch_approx.hpp>
 #include "50_PowXN.h"
 
 namespace lc::t50 {

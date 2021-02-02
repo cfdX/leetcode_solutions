@@ -1,4 +1,4 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
 #include "40_CombinationSumII.h"
 
 #include <algorithm>

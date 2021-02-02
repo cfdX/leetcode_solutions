@@ -1,5 +1,7 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
 #include "32_LongestValidParentheses.h"
+
+#include <algorithm>
 
 namespace lc::t32 {
 namespace {
@@ -12,7 +14,7 @@ auto callAlg( std::string s ) -> int {
     // разворот строки
     std::reverse( s.begin(), s.end() );
     std::transform( s.begin(), s.end(), s.begin(), []( auto c ) {
-        return c == ')' ? '(' : ')';
+        return (c == ')') ? '(' : ')';
     } );
     const auto reverse_res = Solution::longestValidParentheses( s );
     REQUIRE( reverse_res == direct_res );

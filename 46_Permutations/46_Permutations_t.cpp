@@ -1,4 +1,4 @@
-#include <catch_all.hpp>
+#include <catch_test_macros.hpp>
 #include "46_Permutations.h"
 
 namespace lc::t46 {
