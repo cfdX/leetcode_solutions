@@ -10,7 +10,7 @@ using Vec = std::vector<int>;
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( Vec heights ) noexcept -> int {
+auto callAlg( Vec heights ) -> int {
     const auto sum1 = Solution::trap( heights );
     // для увеличения числа тестовых кейсов
     // проверяем еще для развернутого массива

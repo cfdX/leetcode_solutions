@@ -1,13 +1,17 @@
 #include <catch_all.hpp>
 #include "44_WildcardMatching.h"
+#include "44_WildcardMatching_V2.h"
 
 namespace lc::t44 {
 namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( std::string const& s, std::string const& p ) noexcept -> bool {
-    return Solution::isMatch( s, p );
+auto callAlg( std::string const& s, std::string const& p ) -> bool {
+    const auto v1 = Solution::isMatch( s, p );
+    const auto v2 = Solution_V2::isMatch( s, p );
+    REQUIRE( v1 == v2 );
+    return v2;
 }
 
 //------------------------------
@@ -87,7 +91,74 @@ TEST_CASE( "44_WildcardMatching my testcases", "[]" ) {
         REQUIRE( callAlg( s, p ) == true );
     }
 
-    SECTION( "exponential O(.) test" ) {
+    SECTION( "just case 1" ) {
+        const auto s = std::string{ "absde" };
+        const auto p = std::string{ "ab*de" };
+        REQUIRE( callAlg( s, p ) == true );
+    }
+
+    SECTION( "just case 2" ) {
+        const auto s = std::string{ "ab*b" };
+        const auto p = std::string{ "abcd" };
+        REQUIRE( callAlg( s, p ) == false );
+    }
+
+    SECTION( "pattern start with star " ) {
+        const auto s = std::string{
+            "abbabaaabbac"
+        };
+        const auto p = std::string{
+            "**aa*****ba*"
+        };
+        REQUIRE( callAlg( s, p ) == true );
+    }
+
+    SECTION( "just case 3" ) {
+        const auto s = std::string{
+            "abbabaaabbaabbaaabbba"
+        };
+        const auto p = std::string{
+            "**aa*****ba*a*bb**aa*ab*bb"
+        };
+        REQUIRE( callAlg( s, p ) == false );
+    }
+
+    SECTION( "just case 4" ) {
+        const auto s = std::string{
+            "abbabaaabbaabbaaabbb"
+        };
+        const auto p = std::string{
+            "**aa*****ba*a?*bb**aa*ab*bb"
+        };
+        REQUIRE( callAlg( s, p ) == false );
+    }
+
+    SECTION( "just case 5" ) {
+        const auto s = std::string{
+            "aaabbaab"
+        };
+        const auto p = std::string{
+            "*aa*ba*a?*b"
+        };
+        REQUIRE( callAlg( s, p ) == false );
+    }
+
+    SECTION( "just case 6" ) {
+        const auto s = std::string{ "adceb" };
+        const auto p = std::string{ "*a*" };
+        REQUIRE( callAlg( s, p ) == true );
+    }
+
+    SECTION( "just case 7" ) {
+        const auto s = std::string{ "a" };
+        const auto p = std::string{ "a*" };
+        REQUIRE( callAlg( s, p ) == true );
+    }
+}
+
+//------------------------------
+TEST_CASE( "44_WildcardMatching exponential O(.) test", "[]" ) {
+    SECTION( "enormous test1" ) {
         const auto s = std::string{
             "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb"
         };
@@ -100,3 +171,4 @@ TEST_CASE( "44_WildcardMatching my testcases", "[]" ) {
 
 } // namespace {
 } // namespace lc::t44
+

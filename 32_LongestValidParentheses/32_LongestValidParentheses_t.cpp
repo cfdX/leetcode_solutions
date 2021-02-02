@@ -6,7 +6,7 @@ namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( std::string s ) noexcept -> int {
+auto callAlg( std::string s ) -> int {
     // для увеличения числа проверок смотрим и на развернутую строку
     const auto direct_res = Solution::longestValidParentheses( s );
     // разворот строки

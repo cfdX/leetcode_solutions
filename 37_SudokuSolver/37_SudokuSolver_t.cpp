@@ -16,7 +16,7 @@ auto isValid( Board const& b ) noexcept -> bool {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( Board b ) noexcept -> Board {
+auto callAlg( Board b ) -> Board {
     Solution::solveSudoku( b );
     REQUIRE( true == isValid( b ) );
     return b;
