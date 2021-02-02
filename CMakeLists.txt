@@ -64,6 +64,9 @@ add_executable(leetcode_solutions
   42_TrappingRainWater/42_TrappingRainWater.h
   42_TrappingRainWater/42_TrappingRainWater.cpp
   42_TrappingRainWater/42_TrappingRainWater_t.cpp
+  44_WildcardMatching/44_WildcardMatching.h
+  44_WildcardMatching/44_WildcardMatching.cpp
+  44_WildcardMatching/44_WildcardMatching_t.cpp
   45_JumpGameII/45_JumpGameII.h
   45_JumpGameII/45_JumpGameII.cpp
   45_JumpGameII/45_JumpGameII_t.cpp
