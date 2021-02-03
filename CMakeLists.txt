@@ -34,6 +34,9 @@ add_executable(leetcode_solutions
   6_ZigZagConversion/6_ZigZagConversion.h
   6_ZigZagConversion/6_ZigZagConversion.cpp
   6_ZigZagConversion/6_ZigZagConversion_t.cpp
+  7_ReverseInteger/7_ReverseInteger.h
+  7_ReverseInteger/7_ReverseInteger.cpp
+  7_ReverseInteger/7_ReverseInteger_t.cpp
   10_RegularExpressionMatching/10_RegularExpressionMatching.h
   10_RegularExpressionMatching/10_RegularExpressionMatching.cpp
   10_RegularExpressionMatching/10_RegularExpressionMatching_V2.h
