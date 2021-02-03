@@ -54,6 +54,9 @@ add_executable(leetcode_solutions
   12_IntegerToRoman/12_IntegerToRoman.h
   12_IntegerToRoman/12_IntegerToRoman.cpp
   12_IntegerToRoman/12_IntegerToRoman_t.cpp
+  13_RomanToInteger/13_RomanToInteger.h
+  13_RomanToInteger/13_RomanToInteger.cpp
+  13_RomanToInteger/13_RomanToInteger_t.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.h
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords_t.cpp
