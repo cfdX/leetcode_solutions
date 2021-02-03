@@ -37,6 +37,9 @@ add_executable(leetcode_solutions
   7_ReverseInteger/7_ReverseInteger.h
   7_ReverseInteger/7_ReverseInteger.cpp
   7_ReverseInteger/7_ReverseInteger_t.cpp
+  8_StringToIntegerAtoi/8_StringToIntegerAtoi.h
+  8_StringToIntegerAtoi/8_StringToIntegerAtoi.cpp
+  8_StringToIntegerAtoi/8_StringToIntegerAtoi_t.cpp
   10_RegularExpressionMatching/10_RegularExpressionMatching.h
   10_RegularExpressionMatching/10_RegularExpressionMatching.cpp
   10_RegularExpressionMatching/10_RegularExpressionMatching_V2.h
