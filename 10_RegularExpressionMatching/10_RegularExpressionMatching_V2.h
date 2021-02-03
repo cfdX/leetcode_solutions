@@ -1,5 +1,5 @@
-#ifndef LC_10_REGULAREXPRESSIONMATCHING_H
-#define LC_10_REGULAREXPRESSIONMATCHING_H
+#ifndef LC_10_REGULAREXPRESSIONMATCHING_V2_H
+#define LC_10_REGULAREXPRESSIONMATCHING_V2_H
 
 #include <string>
 
@@ -14,10 +14,10 @@ The matching should cover the entire input string (not partial).
 */
 
 //------------------------------
-class Solution {
+class Solution_V2 {
 public:
     //------------------------------
-    // brute force + momization
+    // O(s*p) - dynamic programming
     [[nodiscard]]
     static
     auto isMatch(
@@ -28,4 +28,4 @@ public:
 
 } // namespace lc::t10
 
-#endif // LC_10_REGULAREXPRESSIONMATCHING_H
+#endif // LC_10_REGULAREXPRESSIONMATCHING_V2_H

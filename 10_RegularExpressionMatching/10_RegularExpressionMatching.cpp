@@ -1,4 +1,4 @@
-#include "10_RegularExpressionMatching.h"
+#include "10_RegularExpressionMatching_V2.h"
 
 #include <vector>
 
@@ -51,7 +51,7 @@ auto skip1( std::string_view s ) -> std::string_view {
 [[nodiscard]]
 constexpr
 auto isStarred( Char const c ) -> bool {
-    return (c == '?') || std::isupper(c);
+    return (c == '?') || static_cast<bool>(std::isupper(c));
 }
 
 //------------------------------
@@ -152,7 +152,7 @@ auto isMatchImpl(
 //------------------------------
 // лобовое решение с мемоизацией
 [[nodiscard]]
-auto Solution::isMatch(
+auto Solution_V2::isMatch(
               std::string const& s
             , std::string p )
         -> bool {
@@ -162,3 +162,5 @@ auto Solution::isMatch(
 }
 
 } // namespace lc::t10
+
+
