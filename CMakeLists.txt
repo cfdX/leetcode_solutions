@@ -40,6 +40,9 @@ add_executable(leetcode_solutions
   8_StringToIntegerAtoi/8_StringToIntegerAtoi.h
   8_StringToIntegerAtoi/8_StringToIntegerAtoi.cpp
   8_StringToIntegerAtoi/8_StringToIntegerAtoi_t.cpp
+  9_PalindromeNumber/9_PalindromeNumber.h
+  9_PalindromeNumber/9_PalindromeNumber.cpp
+  9_PalindromeNumber/9_PalindromeNumber_t.cpp
   10_RegularExpressionMatching/10_RegularExpressionMatching.h
   10_RegularExpressionMatching/10_RegularExpressionMatching.cpp
   10_RegularExpressionMatching/10_RegularExpressionMatching_V2.h
