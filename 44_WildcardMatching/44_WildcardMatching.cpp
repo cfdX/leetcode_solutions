@@ -119,7 +119,7 @@ auto removeMultiStars( std::string&& p ) noexcept -> std::string {
 
 //------------------------------
 // лобовое решение с мемоизацией
-// TODO нужно сделать что-нить по-интереснее. Через динамическое программирование
+// в V2 - через динамическое программирование
 [[nodiscard]]
 auto Solution::isMatch(
               std::string const& s

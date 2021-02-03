@@ -34,6 +34,9 @@ add_executable(leetcode_solutions
   6_ZigZagConversion/6_ZigZagConversion.h
   6_ZigZagConversion/6_ZigZagConversion.cpp
   6_ZigZagConversion/6_ZigZagConversion_t.cpp
+  10_RegularExpressionMatching/10_RegularExpressionMatching.h
+  10_RegularExpressionMatching/10_RegularExpressionMatching.cpp
+  10_RegularExpressionMatching/10_RegularExpressionMatching_t.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.h
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords_t.cpp
