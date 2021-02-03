@@ -35,14 +35,18 @@ auto isMatchImpl(
         const auto start_ind = std::max( min_valid, none_star_cnt );
         // это "эффективное" начало массива (с учетом добавленного в начало элемента
         const auto curr_begin = curr.begin() + 1;
-        std::fill( curr_begin, curr_begin + start_ind, false );
+        // этот if вместо такого цикла, он быстрее а первые элементы мы в итоге не используем
+//        std::fill( curr_begin, curr_begin + start_ind, false );
+        if ( start_ind != 0 ) {
+            curr[ start_ind  ] = false;
+        }
         if ( pc != '*' ) {
             ++none_star_cnt;
             for ( auto ci = start_ind; ci < s.size(); ++ci ) {
                 curr[ ci + 1 ] = ( prev[ ci ] && cmp( s[ ci ], pc ) );
             }
             const auto first_true = std::find(
-                  curr_begin
+                  curr_begin + start_ind
                 , curr.end()
                 , true
             );
