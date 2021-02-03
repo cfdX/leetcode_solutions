@@ -33,5 +33,13 @@ TEST_CASE( "8_StringToIntegerAtoi example testcases", "[]" ) {
     }
 }
 
+//------------------------------
+TEST_CASE( "8_StringToIntegerAtoi my testcases", "[]" ) {
+    SECTION( "starts with plus" ) {
+        REQUIRE( callAlg( "+42" ) == 42 );
+        REQUIRE( callAlg( "  +42" ) == 42 );
+    }
+}
+
 } // namespace {
 } // namespace lc::t8
