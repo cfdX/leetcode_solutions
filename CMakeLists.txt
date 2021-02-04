@@ -19,6 +19,9 @@ add_executable(leetcode_solutions
   ListNode.cpp
   ListNode.h
   ListNode_t.cpp
+  TestUtils.cpp
+  TestUtils.h
+  TestUtils_t.cpp
   1_TwoSum/1_TwoSum.h
   1_TwoSum/1_TwoSum.cpp
   1_TwoSum/1_TwoSum_t.cpp
