@@ -17,7 +17,7 @@ using Alg = Vec (*)( Vec const&, int const );
 auto algAndSort( Alg const alg, Vec const& nums, int const target ) -> Vec {
     auto res = alg( nums, target );
     // чтоб нам было проще сравнивать результаты
-    std::sort( res.begin(), res.end() );
+    std::ranges::sort( res );
     return res;
 }
 

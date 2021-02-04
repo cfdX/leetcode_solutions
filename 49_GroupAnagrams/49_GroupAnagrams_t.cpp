@@ -15,11 +15,10 @@ using Vec = std::vector<std::string>;
 [[nodiscard]]
 auto normalized( std::vector<Vec> res ) -> std::vector<Vec> {
     for ( auto& list : res ) {
-        std::sort( list.begin(), list.end() );
+        std::ranges::sort( list );
     }
-    std::sort(
-          res.begin()
-        , res.end()
+    std::ranges::sort(
+          res
         , []( auto const& o1, auto const& o2 ) {
             return o1.front() < o2.front();
         }

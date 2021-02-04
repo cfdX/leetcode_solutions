@@ -18,7 +18,7 @@ using Strings = std::vector<std::string>;
 auto callAlg( std::string_view s, Strings const& words ) -> Indexes {
     auto res = Solution::findSubstring( s, words );
     // сортируем выхлоп для удобства сравнения
-    std::sort( res.begin(), res.end() );
+    std::ranges::sort( res );
     return res;
 }
 
