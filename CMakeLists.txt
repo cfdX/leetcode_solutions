@@ -60,6 +60,9 @@ add_executable(leetcode_solutions
   14_LongestCommonPrefix/14_LongestCommonPrefix.h
   14_LongestCommonPrefix/14_LongestCommonPrefix.cpp
   14_LongestCommonPrefix/14_LongestCommonPrefix_t.cpp
+  15_3Sum/15_3Sum.h
+  15_3Sum/15_3Sum.cpp
+  15_3Sum/15_3Sum_t.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.h
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords_t.cpp
