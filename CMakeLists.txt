@@ -57,6 +57,9 @@ add_executable(leetcode_solutions
   13_RomanToInteger/13_RomanToInteger.h
   13_RomanToInteger/13_RomanToInteger.cpp
   13_RomanToInteger/13_RomanToInteger_t.cpp
+  14_LongestCommonPrefix/14_LongestCommonPrefix.h
+  14_LongestCommonPrefix/14_LongestCommonPrefix.cpp
+  14_LongestCommonPrefix/14_LongestCommonPrefix_t.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.h
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords.cpp
   30_SubstringWithConcatenationOfAllWords/30_SubstringWithConcatenationOfAllWords_t.cpp
