@@ -6,7 +6,7 @@ namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( int n ) noexcept -> bool {
+auto callAlg( int n ) -> bool {
     return Solution::isPalindrome( n );
 }
 

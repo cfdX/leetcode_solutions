@@ -8,7 +8,7 @@ using Board = std::vector<std::vector<char>>;
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( Board const& b ) noexcept -> bool {
+auto callAlg( Board const& b ) -> bool {
     return Solution::isValidSudoku( b );
 }
 

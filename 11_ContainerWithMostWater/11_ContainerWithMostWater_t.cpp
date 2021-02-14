@@ -8,7 +8,7 @@ using Vec = std::vector<int>;
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( Vec const& heights ) noexcept -> int {
+auto callAlg( Vec const& heights ) -> int {
     return Solution::maxArea( heights );
 }
 

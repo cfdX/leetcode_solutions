@@ -6,7 +6,7 @@ namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( std::string const& n ) noexcept -> int {
+auto callAlg( std::string const& n ) -> int {
     return Solution::myAtoi( n );
 }
 

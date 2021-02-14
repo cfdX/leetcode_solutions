@@ -7,7 +7,7 @@ namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( double x, int n ) noexcept -> double {
+auto callAlg( double x, int n ) -> double {
     return Solution::myPow( x, n );
 }
 

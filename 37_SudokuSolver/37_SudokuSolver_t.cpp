@@ -10,7 +10,7 @@ using Board = std::vector<std::vector<char>>;
 
 //------------------------------
 [[nodiscard]]
-auto isValid( Board const& b ) noexcept -> bool {
+auto isValid( Board const& b ) -> bool {
     return t36::Solution::isValidSudoku( b );
 }
 

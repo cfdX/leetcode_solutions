@@ -6,7 +6,7 @@ namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( int n ) noexcept -> int {
+auto callAlg( int n ) -> int {
     return Solution::reverse( n );
 }
 

@@ -8,7 +8,7 @@ using Vec = std::vector<int>;
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( Vec const& nums ) noexcept -> int {
+auto callAlg( Vec const& nums ) -> int {
     return Solution::jump( nums );
 }
 

@@ -6,7 +6,7 @@ namespace {
 
 //------------------------------
 [[nodiscard]]
-auto callAlg( std::initializer_list<int> nums_list ) noexcept -> int {
+auto callAlg( std::initializer_list<int> nums_list ) -> int {
     // алгоритм хочет мутабельный вектор, поэтому мы его тут создаем
     auto nums = std::vector<int>( nums_list.begin(), nums_list.end() );
     return Solution::firstMissingPositive( nums );
