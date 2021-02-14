@@ -122,6 +122,9 @@ add_executable(leetcode_solutions
   50_PowXN/50_PowXN.h
   50_PowXN/50_PowXN.cpp
   50_PowXN/50_PowXN_t.cpp
+  74_SearchA2DMatrix/74_SearchA2DMatrix.h
+  74_SearchA2DMatrix/74_SearchA2DMatrix.cpp
+  74_SearchA2DMatrix/74_SearchA2DMatrix_t.cpp
   153_FindMinimumInRotatedSortedArray/153_FindMinimumInRotatedSortedArray.h
   153_FindMinimumInRotatedSortedArray/153_FindMinimumInRotatedSortedArray.cpp
   153_FindMinimumInRotatedSortedArray/153_FindMinimumInRotatedSortedArray_t.cpp
