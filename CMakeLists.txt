@@ -119,6 +119,9 @@ add_executable(leetcode_solutions
   50_PowXN/50_PowXN.h
   50_PowXN/50_PowXN.cpp
   50_PowXN/50_PowXN_t.cpp
+  153_FindMinimumInRotatedSortedArray/153_FindMinimumInRotatedSortedArray.h
+  153_FindMinimumInRotatedSortedArray/153_FindMinimumInRotatedSortedArray.cpp
+  153_FindMinimumInRotatedSortedArray/153_FindMinimumInRotatedSortedArray_t.cpp
   Catch2/src/catch2/catch_test_macros.hpp
 )
 target_link_libraries(leetcode_solutions Catch2::Catch2)
